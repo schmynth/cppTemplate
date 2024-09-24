@@ -14,7 +14,7 @@ int main()
 {
     int y;
     chef.makeSpecialDish();
-
+    italianChef.makePasta();
     italianChef.makeSpecialDish();
     cout << "input a number: " << endl;
     cin >> y;

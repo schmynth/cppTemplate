@@ -8,7 +8,7 @@ void Chef::makeChicken()
 
 void Chef::makeSalad()
 {
-    std::cout << "The Chef makes Salad." << std::endl;
+    std::cout << "The Chef makes great Salad." << std::endl;
 }
 
 void Chef::makeSpecialDish()

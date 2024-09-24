@@ -1,7 +1,7 @@
 #include "ItalianChef.h"
 #include <iostream>
 
-void ItalianChefmakePasta(){
+void ItalianChef::makePasta(){
     std::cout << "The Italian Chef makes Pasta" << std::endl;
 }
 

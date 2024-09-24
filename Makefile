@@ -17,6 +17,8 @@ run: clean all
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) $^ -o $@ $(LIBRARIES)
+	@echo "compiling executables"
 
 clean:
+	@echo "removing everything but the source files"
 	-rm $(BIN)/*
