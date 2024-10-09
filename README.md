@@ -1,4 +1,6 @@
-# This is a template for C++ projects
+# Template for C++ projects
+
+This repository serves as a starting point for new C++-Projects in VS Code and as a knowledge database for structuring projects.
 
 ## Folder Structure
 
@@ -22,6 +24,7 @@ I included the include/*.h files and their src/*.cpp counterparts as an example 
 ## Header Guards
 
 Header guards ensure that functions are not defined multiple times, which leads to linker errors.
+They should be applied in .h-Files.
 
 ```
 #ifndef CHEF_H
