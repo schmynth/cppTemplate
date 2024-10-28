@@ -1,9 +1,4 @@
 #include <iostream>
-
-
-
-#include "Chef.h"
-#include "ItalianChef.h"
 #include "mathFunctions.h"
 
 int next_fib_number(int last, int beforeLast)
