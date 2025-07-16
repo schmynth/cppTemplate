@@ -1,3 +1,15 @@
+- [C++](#c)
+  - [Data Types](#data-types)
+    - [std::vector](#stdvector)
+      - [definition](#definition)
+      - [initialization](#initialization)
+  - [Funtions](#funtions)
+    - [std::clamp](#stdclamp)
+  - [Documentation](#documentation)
+  - [Nuances](#nuances)
+    - [comparing floats](#comparing-floats)
+      - [problem](#problem)
+    - [solution](#solution)
 
 # C++
 
@@ -34,6 +46,43 @@ int main() {
         cout << i << " ";
     return 0;
 }
+```
+
+## Funtions
+
+Important or useful functions I stumbled upon:
+
+### std::clamp
+
+Clamps a value into a given range. If in range, the value is unchanged. If not, the value is pushed to minVal or pulled to maxVal:
+
+```cpp
+std::clamp(value, minVal, maxVal);
+```
+
+## Documentation
+
+If you define data types, classes or functions, you might want to get information on hover like a description,  
+parameters and return types etc.  
+In C++ this is done via "Doxygen". The basic syntax is as follows:  
+```/**``` opens a docstring and ```*/``` closes it. Every line in between starts with a ```*```.  
+For newlines in the short description on hover, start each line with ```@brief``` and end it with a backslash  
+if a new lone follows.
+```@param``` is used for introducing the parameters and ```return``` for the return value.
+
+
+```cpp
+/**
+ * @brief enum that translates instrument names to midi note ints.\
+ * @brief available DrumTypes are:
+ * @brief kick, snare, hat
+ */
+enum class DrumType
+{
+    kick = 36,
+    snare = 38,
+    hat = 42,
+};
 ```
 
 ## Nuances
