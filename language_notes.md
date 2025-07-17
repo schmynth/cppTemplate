@@ -1,8 +1,10 @@
 - [C++](#c)
   - [Data Types](#data-types)
+    - [struct](#struct)
     - [std::vector](#stdvector)
       - [definition](#definition)
       - [initialization](#initialization)
+    - [std::map](#stdmap)
   - [Funtions](#funtions)
     - [std::clamp](#stdclamp)
   - [Documentation](#documentation)
@@ -14,6 +16,38 @@
 # C++
 
 ## Data Types
+
+### struct
+
+If you define a struct like this:
+
+```cpp
+struct FillVariant : GrooveVariant 
+{
+    juce::String name;
+    std::vector<DrumClip> clips;
+    double length = 4;
+};
+```
+
+You can initialize an instance of it with positional or designated initializers.
+Designated initializers are more readable and look as follows:
+
+```cpp
+FillVariant fill0 = 
+{
+    .name = "fill0",
+    .clips = {
+        { ClipType::fill, 0,
+            { /* stuff */ }
+        }
+    },
+    .length = 4.0
+};
+```
+
+>[!CAUTION]
+>Designated initializers do not work with inherited structs!
 
 ### std::vector
 
@@ -46,6 +80,33 @@ int main() {
         cout << i << " ";
     return 0;
 }
+```
+
+### std::map
+
+A map is an associative container that stores key value pairs sorted based on keys. Keys are unique.
+Example:
+
+```cpp
+int main() {
+    
+    // Creating a map of integer keys
+    // and string values
+    map<int, string> m {{1, "Geeks"},
+             {2,"For"}, {3,"Geeks"}};
+
+    for (auto& p : m)
+        cout << p.first << " " << p.second
+        << "\n";
+    return 0;
+}
+```
+
+This will output:
+```
+1 Geeks
+2 For
+3 Geeks
 ```
 
 ## Funtions
